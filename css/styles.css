@@ -10,6 +10,7 @@
   --navy-blue-modal: rgba(46, 47, 66, 0.4);
   --grey: rgba(46, 47, 66, 0.7);
   --clr-white: #ffffff;
+  --clr-black: #000000;
   --clr-modal-bacground: #fcfcfc;
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -423,10 +424,10 @@ section {
 .socials-wraper {
   min-width: 208px;
   margin-left: 120px;
-  margin-right: auto;
+  margin-right: 80px;
 }
 
-.socials-title {
+.footer-title {
   margin-bottom: 16px;
 
   color: var(--clr-white);
@@ -444,6 +445,62 @@ section {
 .main-footer .social-link:hover,
 .main-footer .social-link:focus {
   background-color: var(--green);
+}
+
+.subscription-wraper {
+  display: flex;
+  column-gap: 24px;
+}
+
+.email-field {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: var(--clr-white);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+}
+
+.email-field::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: var(--clr-white);
+  background-color: var(--iris);
+  border-color: var(--iris);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* MODAL WINDOW */
@@ -478,7 +535,7 @@ section {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--time-function);
 }
 
 .close-btn {
@@ -495,7 +552,22 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
+  color: var(--clr-black);
+
   cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}
+
+.close-btn .icon {
+  fill: currentColor;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--clr-white);
+  background-color: var(--accent-color);
 }
 
 /* PORTFOLIO MAIN*/
